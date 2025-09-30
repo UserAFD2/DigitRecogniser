@@ -35,5 +35,5 @@ python src/train.py
 
 ## Running the app
 ```shell
-python main.py
+python src/main.py
 ```
