@@ -30,7 +30,7 @@ A Python project that uses a Convolutional Neural Network (CNN) to recognize han
 
 ## Training and evaluating the Model
 ```shell
-python train_eval.py
+python src/train.py
 ```
 
 ## Running the app
