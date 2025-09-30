@@ -1,0 +1,9 @@
+opencv-python
+numpy
+Pillow
+tensorflow
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+torchaudio
+matplotlib
