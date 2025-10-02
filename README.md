@@ -1,9 +1,13 @@
 # AI Digit Recogniser
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)  
+![pytorch](https://img.shields.io/badge/pytorch-yellow)
+
 A Python project that uses a Convolutional Neural Network (CNN) to recognize handwritten digits from the MNIST dataset. Includes training, evaluation, and a simple application to test digit recognition.
 
 ## Prerequisites
 - Python 3.10+
+- PyTorch
 - PyTorch with CUDA (optional, for GPU acceleration)
 
 ## Setting Up the Environment

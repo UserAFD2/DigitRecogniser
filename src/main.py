@@ -3,6 +3,7 @@ import os
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from tensorflow.keras.models import load_model # type: ignore
+import sys
 
 # Get the directory of the current script
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -10,8 +11,17 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 # Build the full path to the model
 model_path = os.path.join(script_dir, 'digitModel.h5')
 
+if getattr(sys, 'frozen', False):
+    # Running in a bundle
+    base_path = sys._MEIPASS
+else:
+    # Running in normal Python
+    base_path = os.path.dirname(os.path.abspath(__file__))
+
+model_path = os.path.join(base_path, "data", "outputs", "digitModel.h5")
 # Load the model
-model = load_model('..\data\outputs\digitModel.h5')
+model = load_model(model_path)
+
 
 # Label mapping for the model's output
 label_map = {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9'}
